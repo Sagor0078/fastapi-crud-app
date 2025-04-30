@@ -1,4 +1,4 @@
-# TaskFlow - Task Management Application
+# Task Management Application
 
 A task management application with user authentication, built with FastAPI, JWT, PostgreSQL, SQLAlchemy and Pydantic.
 
@@ -73,15 +73,34 @@ A task management application with user authentication, built with FastAPI, JWT,
 ## Project Structure
 
 ```
- src/
-│   ├── routers/
-│   │   ├── auth.py
-│   │   ├── users.py
-│   │   └── tasks.py
-│   ├── main.py
-│   ├── models.py
-│   ├── schemas.py
-│   ├── database.py
-│   └── requirements.txt
-
+ fastapi-crud-app/
+├── alembic.ini
+├── database.py
+├── main.py
+├── models.py
+├── requirements.txt
+├── schemas.py
+├── .env.example.md
+├── migrations/
+│   └── env.py
+└── src/
+    └── routers/
+        ├── auth.py
+        ├── tasks.py
+        └── users.py
 ```
+## Apply database migrations
+
+- Initial Alembic
+```bash
+alembic init migrations
+```
+- Generate Migration Script
+```bash
+alembic revision --autogenerate -m "Initial migration"
+```
+- Apply Migrations
+```bash
+alembic upgrade head
+```
+
