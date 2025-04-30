@@ -1,19 +1,30 @@
-from sqlalchemy import Boolean, Column, ForeignKey, Integer, String, Text, DateTime, Enum
-from sqlalchemy.orm import relationship
-from sqlalchemy.sql import func
 import enum
-
 from database import Base
+from sqlalchemy.sql import func
+from sqlalchemy.orm import relationship
+from sqlalchemy import (
+    Boolean,
+    Column,
+    ForeignKey,
+    Integer,
+    String,
+    Text,
+    DateTime,
+    Enum,
+)
+
 
 class TaskStatus(str, enum.Enum):
     TODO = "todo"
     IN_PROGRESS = "in_progress"
     COMPLETED = "completed"
 
+
 class TaskPriority(str, enum.Enum):
     LOW = "low"
     MEDIUM = "medium"
     HIGH = "high"
+
 
 class User(Base):
     __tablename__ = "users"
@@ -28,6 +39,7 @@ class User(Base):
     updated_at = Column(DateTime(timezone=True), onupdate=func.now())
 
     tasks = relationship("Task", back_populates="owner", cascade="all, delete-orphan")
+
 
 class Task(Base):
     __tablename__ = "tasks"

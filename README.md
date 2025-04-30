@@ -1,1 +1,87 @@
-# fastapi crud app
+# TaskFlow - Task Management Application
+
+A task management application with user authentication, built with FastAPI, JWT, PostgreSQL, SQLAlchemy and Pydantic.
+
+## Features
+
+- User authentication with JWT tokens
+- User registration and profile management
+- Create, read, update, and delete tasks
+- Associate tasks with specific users
+- Filter tasks by status and priority
+
+## Tech Stack
+
+### Backend
+- FastAPI - Python web framework
+- SQLAlchemy - ORM for database interaction
+- PostgreSQL - Database
+- JWT - Authentication
+- Pydantic - Data validation
+
+
+### Prerequisites
+
+- Python 3.11
+- PostgreSQL database
+
+### Setup
+
+1. Clone the repository
+   ```bash
+   git clone https://github.com/Sagor0078/fastapi-crud-app.git
+   ```
+2. Create Virtual Environment:
+   ```bash
+   python3.11 -m venv env
+
+   source env/bin/activate
+   ```
+3. Install dependencies:
+   ```bash
+   cd fastapi-crud-app
+   pip install -r requirements.txt
+   ```
+
+4. Configure your PostgreSQL database in `.env` like **.env.example.md**
+
+5. Start the application:
+   ```bash
+   uvicorn main:app --reload
+   ```
+
+## API Endpoints
+
+- **Authentication**
+  - POST `/api/token` - Get authentication token
+
+- **Users**
+  - POST `/api/users/` - Create a new user
+  - GET `/api/users/` - Get all users
+  - GET `/api/users/me` - Get current user
+  - GET `/api/users/{user_id}` - Get a specific user
+  - PUT `/api/users/{user_id}` - Update a user
+  - DELETE `/api/users/{user_id}` - Delete a user
+
+- **Tasks**
+  - POST `/api/tasks/` - Create a new task
+  - GET `/api/tasks/` - Get all tasks (with optional filtering)
+  - GET `/api/tasks/{task_id}` - Get a specific task
+  - PUT `/api/tasks/{task_id}` - Update a task
+  - DELETE `/api/tasks/{task_id}` - Delete a task
+
+## Project Structure
+
+```
+ src/
+│   ├── routers/
+│   │   ├── auth.py
+│   │   ├── users.py
+│   │   └── tasks.py
+│   ├── main.py
+│   ├── models.py
+│   ├── schemas.py
+│   ├── database.py
+│   └── requirements.txt
+
+```
