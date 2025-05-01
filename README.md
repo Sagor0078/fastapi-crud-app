@@ -89,6 +89,21 @@ uvicorn main:app --reload
         ├── tasks.py
         └── users.py
 ```
+
+## Apply unit test
+
+```bash
+pytest -v
+```
+## for linting and code formatting we used **Ruff**
+
+```bash
+pip install ruff
+
+
+ruff check . --fix && ruff format .
+```
+
 ## Apply database migrations
 
 - Initial Alembic
@@ -103,4 +118,7 @@ alembic revision --autogenerate -m "Initial migration"
 ```bash
 alembic upgrade head
 ```
+## The database diagram for users and tasks tables, showing their fields and the one-to-many relationship:
+
+[![Directory docs](docs/erd.png)](https://github.com/Sagor0078/fastapi-crud-app)
 

@@ -1,0 +1,34 @@
+Enum task_status {
+  todo
+  in_progress
+  completed
+}
+
+Enum task_priority {
+  low
+  medium
+  high
+}
+
+Table users {
+  id int [pk, increment]
+  email varchar [unique, note: "User email, must be unique"]
+  username varchar [unique, note: "Username, must be unique"]
+  hashed_password varchar [note: "Password stored in hashed form"]
+  full_name varchar
+  is_active boolean [default: true]
+  created_at datetime [note: "Account creation timestamp"]
+  updated_at datetime [note: "Last update timestamp"]
+}
+
+Table tasks {
+  id int [pk, increment]
+  title varchar [note: "Short title of the task"]
+  description text [note: "Optional task details"]
+  status task_status [note: "Enum: todo, in_progress, completed"]
+  priority task_priority [note: "Enum: low, medium, high"]
+  due_date datetime [note: "Deadline for the task"]
+  owner_id int [ref: > users.id]
+  created_at datetime
+  updated_at datetime
+}
