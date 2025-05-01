@@ -118,7 +118,7 @@ alembic revision --autogenerate -m "Initial migration"
 ```bash
 alembic upgrade head
 ```
-## The database diagram for users and tasks tables, showing their fields and the one-to-many relationship:
+The database diagram for users and tasks tables, showing their fields and the one-to-many relationship:
 
 [![Directory docs](docs/erd.png)](https://github.com/Sagor0078/fastapi-crud-app)
 
