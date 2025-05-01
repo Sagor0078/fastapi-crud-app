@@ -28,27 +28,27 @@ A task management application with user authentication, built with FastAPI, JWT,
 ### Setup
 
 1. Clone the repository
-   ```bash
-   git clone https://github.com/Sagor0078/fastapi-crud-app.git
-   ```
+```bash
+git clone https://github.com/Sagor0078/fastapi-crud-app.git
+```
 2. Create Virtual Environment:
-   ```bash
-   python3.11 -m venv env
+```bash
+python3.11 -m venv env
 
-   source env/bin/activate
-   ```
+source env/bin/activate
+```
 3. Install dependencies:
-   ```bash
-   cd fastapi-crud-app
-   pip install -r requirements.txt
-   ```
+```bash
+cd fastapi-crud-app
+pip install -r requirements.txt
+```
 
 4. Configure your PostgreSQL database in `.env` like **.env.example.md**
 
 5. Start the application:
-   ```bash
-   uvicorn main:app --reload
-   ```
+```bash
+uvicorn main:app --reload
+```
 
 ## API Endpoints
 

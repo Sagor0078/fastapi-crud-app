@@ -1,13 +1,15 @@
-import os, sys
+import os
+import sys
 from logging.config import fileConfig
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 from sqlalchemy import engine_from_config
 from sqlalchemy import pool
 
 from alembic import context
 from dotenv import load_dotenv
-from database import Base, DATABASE_URL
+from database import Base
 from models import *
 
 target_metadata = Base.metadata
