@@ -4,7 +4,7 @@ from jose import jwt
 from datetime import timedelta, datetime
 from main import app
 from src.routers import auth
-import models
+from src import models
 import os
 from passlib.context import CryptContext
 

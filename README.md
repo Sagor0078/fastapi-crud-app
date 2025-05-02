@@ -93,7 +93,7 @@ uvicorn main:app --reload
 - Apply unit test
 
 ```bash
-PYTHONPATH=. pytest -v    
+pytest -v    
 ```
 - for linting and code formatting we used **Ruff**
 
