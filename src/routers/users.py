@@ -5,7 +5,7 @@ from sqlalchemy.exc import IntegrityError
 
 import models
 import schemas
-from database import get_db
+from config import get_db
 from src.routers.auth import get_password_hash, get_current_active_user
 
 router = APIRouter()

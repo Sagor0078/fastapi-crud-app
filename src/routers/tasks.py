@@ -5,7 +5,7 @@ from fastapi import APIRouter, Depends, HTTPException, status
 
 import models
 import schemas
-from database import get_db
+from config import get_db
 from src.routers.auth import get_current_active_user
 from models import TaskStatus, TaskPriority
 

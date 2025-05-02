@@ -43,7 +43,7 @@ cd fastapi-crud-app
 pip install -r requirements.txt
 ```
 
-4. Configure your PostgreSQL database in `.env` like **.env.example.md**
+4. Configure your PostgreSQL database in `.env` like **.env.example**
 
 5. Start the application:
 ```bash
@@ -93,7 +93,7 @@ uvicorn main:app --reload
 - Apply unit test
 
 ```bash
-pytest -v
+PYTHONPATH=. pytest -v    
 ```
 - for linting and code formatting we used **Ruff**
 

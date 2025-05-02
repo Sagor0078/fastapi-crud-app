@@ -10,7 +10,7 @@ from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 import os
 import schemas
 import models
-from database import get_db
+from config import get_db
 
 router = APIRouter()
 
