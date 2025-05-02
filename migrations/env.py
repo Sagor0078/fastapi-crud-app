@@ -9,7 +9,7 @@ from sqlalchemy import pool
 
 from alembic import context
 from dotenv import load_dotenv
-from config import Base
+from src.config import Base
 from models import *
 
 target_metadata = Base.metadata

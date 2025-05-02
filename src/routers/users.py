@@ -3,9 +3,9 @@ from sqlalchemy.orm import Session
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.exc import IntegrityError
 
-import models
-import schemas
-from config import get_db
+from src import models
+from src import schemas
+from src.config import get_db
 from src.routers.auth import get_password_hash, get_current_active_user
 
 router = APIRouter()

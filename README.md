@@ -122,3 +122,7 @@ database diagram for users and tasks tables, showing their fields and the one-to
 
 [![Directory docs](docs/erd.png)](https://github.com/Sagor0078/fastapi-crud-app)
 
+- To generate a 32-byte (256-bit) secret key using openssl, run:
+```bash
+openssl rand -hex 32
+```

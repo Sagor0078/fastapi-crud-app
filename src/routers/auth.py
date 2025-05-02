@@ -8,9 +8,9 @@ from fastapi import APIRouter, Depends, HTTPException, status
 from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 
 import os
-import schemas
-import models
-from config import get_db
+from src import schemas
+from src import models
+from src.config import get_db
 
 router = APIRouter()
 

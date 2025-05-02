@@ -3,11 +3,11 @@ from sqlalchemy.orm import Session
 from sqlalchemy.exc import IntegrityError
 from fastapi import APIRouter, Depends, HTTPException, status
 
-import models
-import schemas
-from config import get_db
+from src import models
+from src import schemas
+from src.config import get_db
 from src.routers.auth import get_current_active_user
-from models import TaskStatus, TaskPriority
+from src.models import TaskStatus, TaskPriority
 
 router = APIRouter()
 
