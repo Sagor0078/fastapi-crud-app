@@ -2,7 +2,7 @@
 
 A task management application with user authentication, built with FastAPI, JWT, PostgreSQL, SQLAlchemy and Pydantic.
 
-## Features
+### Features
 
 - User authentication with JWT tokens
 - User registration and profile management
@@ -10,7 +10,7 @@ A task management application with user authentication, built with FastAPI, JWT,
 - Associate tasks with specific users
 - Filter tasks by status and priority
 
-## Tech Stack
+### Tech Stack
 
 ### Backend
 - FastAPI - Python web framework
@@ -47,10 +47,10 @@ pip install -r requirements.txt
 
 5. Start the application:
 ```bash
-uvicorn main:app --reload
+uvicorn src.main:app --reload
 ```
 
-## API Endpoints
+### API Endpoints
 
 - **Authentication**
   - POST `/api/token` - Get authentication token
@@ -70,7 +70,7 @@ uvicorn main:app --reload
   - PUT `/api/tasks/{task_id}` - Update a task
   - DELETE `/api/tasks/{task_id}` - Delete a task
 
-## Project Structure
+### Project Structure
 
 ```
  fastapi-crud-app/
